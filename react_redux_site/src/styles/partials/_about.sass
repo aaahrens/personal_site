@@ -1,0 +1,19 @@
+.about-container
+  min-height: calc(100vh - #{64px})
+  width: 100%
+  display: flex
+  background-color: white
+  .about-text-wrapper
+    width: 55%
+    margin: 10px auto 0 auto
+    display: flex
+    text-align: start
+    flex-direction: column
+    font-size: 15pt
+    font-family: Helvetica, sans-serif
+    @include breakpoint($tablet)
+      width: 100%
+      margin: 10px 25px 25px 25px
+      font-size: 13pt
+    p
+      margin-top: 20px

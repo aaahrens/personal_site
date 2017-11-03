@@ -1,0 +1,202 @@
+.appBar {
+  background: #2d2d2d !important; }
+
+.footer-container {
+  width: 100%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative; }
+  .footer-container .footer-item {
+    font-size: 10pt;
+    margin: 5px;
+    width: 35px;
+    height: 35px; }
+
+.project-container {
+  min-height: 85vh;
+  width: 100%; }
+  .project-container .project-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .project-container .project-list .project-card {
+      height: auto;
+      max-width: 400px;
+      margin: 20px; }
+
+.skillets {
+  background-color: #5A352D;
+  background-size: 100% 100%; }
+
+.aggre {
+  background-color: #0F7BE0;
+  background-size: 100% 100%; }
+
+.beaver {
+  object-fit: contain;
+  background-color: #373737;
+  background-size: 100% 100%; }
+
+.adamahrens {
+  object-fit: contain; }
+
+.halla {
+  background-color: #e76060;
+  width: auto;
+  object-fit: contain;
+  background-size: 50% 80%; }
+
+.project-item {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative; }
+  .project-item .project-logo {
+    width: auto;
+    height: 100%;
+    float: left; }
+
+.content-container {
+  background-color: #3c3f41;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 100vh - 64px; }
+  .content-container .text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    margin: 30px;
+    color: white;
+    opacity: .85;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 50px; }
+    .content-container .text .sub-header {
+      font-size: 30px; }
+      @media (max-width: 786px) {
+        .content-container .text .sub-header {
+          font-size: 20px; } }
+
+.home-table {
+  height: auto;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  position: relative;
+  max-height: 725px; }
+  .home-table .background {
+    height: 55%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(rgba(255, 153, 51, 0.8), rgba(255, 153, 51, 0.8)), linear-gradient(white, white); }
+  .home-table img {
+    width: 100%;
+    position: relative;
+    max-height: inherit; }
+  .home-table .teeny {
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 0; }
+  .home-table .left {
+    margin-left: 20vw;
+    left: 0; }
+  .home-table .right {
+    margin-right: 20vw;
+    right: 0; }
+  .home-table .pulsating {
+    animation-duration: .4s;
+    animation-name: pulsate;
+    animation-iteration-count: infinite; }
+
+.about-container {
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  background-color: white; }
+  .about-container .about-text-wrapper {
+    width: 55%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    font-size: 15pt;
+    font-family: Helvetica, sans-serif; }
+    @media (max-width: 786px) {
+      .about-container .about-text-wrapper {
+        width: 100%;
+        margin: 10px 25px 25px 25px;
+        font-size: 13pt; } }
+    .about-container .about-text-wrapper p {
+      margin-top: 20px; }
+
+.black-icon-contact {
+  margin-right: -8px !important;
+  margin-left: 8px !important;
+  background: black !important;
+  color: white !important; }
+
+.contact-container {
+  background: white;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center; }
+  @media (max-width: 786px) {
+    .contact-container {
+      min-height: calc(100vh - 56px); } }
+  .contact-container h1 {
+    margin-top: 30px; }
+  .contact-container .copy-item {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; }
+    @media (max-width: 786px) {
+      .contact-container .copy-item {
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-top: 25px; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+body {
+  background-color: #eee;
+  overflow-x: hidden; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.9); }
+  10% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1); } }
+
+.goop {
+  height: 50px;
+  width: 50px; }
+
+.actionMenu button {
+  color: white !important; }
+
+.icon-github:before {
+  content: "\e900"; }
+
+.card-penis {
+  margin-top: auto; }

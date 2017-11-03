@@ -1,0 +1,9 @@
+=shadow_small()
+  box-shadow: 0 4px 12px rgba(#000, .25)
+
+@mixin breakpoint($point)
+  @if ($point <=  $tablet)
+    @media(max-width: $tablet)
+      @content
+
+
