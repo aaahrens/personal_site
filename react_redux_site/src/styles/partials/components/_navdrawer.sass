@@ -1,0 +1,35 @@
+.personal-logo
+  height: 50px
+  width: 50px
+
+
+.linkedin
+  font-size: 20pt
+  text-align: center
+  font-family: "Myriad Pro", Helvetica, sans-serif
+  display: flex
+  align-items: flex-end
+  padding-top: 5px
+  @include breakpoint($tablet)
+    padding-top: 3px
+
+.github
+  font-size: 20pt
+  font-family: Roboto, sans-serif
+  margin-left: 4px
+
+
+
+.logo-button-wrapper
+  display: flex
+  flex-wrap: nowrap
+  .logo-button
+    overflow: hidden
+    position: relative
+    height: $logo-button-height
+    display: flex
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    margin: 0 auto 0 auto
+    padding: 10px

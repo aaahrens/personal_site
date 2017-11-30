@@ -1,11 +1,4 @@
 import React, {Component} from 'react'
-import List from "react-toolbox/lib/list/List";
-import ListItem from "react-toolbox/lib/list/ListItem";
-import skilletsLogo from '../../assets/logos/skillets.svg'
-import adamLogo from '../../assets/logos/adam_logo.png'
-import aggreLogo from '../../assets/logos/aggre.svg'
-import beaverLogo from '../../assets/logos/beaverLogo.svg'
-import ProjectLogo from "../../components/project.logo";
 import Card from "react-toolbox/lib/card/Card";
 import CardMedia from "react-toolbox/lib/card/CardMedia";
 import CardTitle from "react-toolbox/lib/card/CardTitle";
@@ -13,8 +6,6 @@ import CardText from "react-toolbox/lib/card/CardText";
 import CardActions from "react-toolbox/lib/card/CardActions";
 import Button from "react-toolbox/lib/button/Button";
 import {connect} from "react-redux";
-import Github from '../../assets/github.png'
-import FontIcon from "react-toolbox/lib/font_icon/FontIcon";
 
 class ProjectBody extends Component {
 
@@ -44,22 +35,29 @@ class ProjectBody extends Component {
 
 								<CardText>{item.description}</CardText>
 
-								<CardActions className="card-penis">
+								<CardActions className="project-card-actions">
 									{
-										item.github ?
-											<Button icon={<span className="fa fa-github-square fa-2x"/>}
-													label="github" href={item.github.link} target="_blank"/> : null
+										item.github &&
+										<Button icon={<span className="fa fa-github-square fa-2x"/>}
+												label="github" href={item.github.link} target="_blank"/>
 									}
 									{
-										item.link ? <Button icon="link" label="Website" href={item.link}
-															target="_blank"/> : null
+										item.link &&
+										<Button icon="link" label="Website" href={item.link} target="_blank"/>
 									}
 								</CardActions>
 							</Card>
 						)
 					}
+					<div className="project-ghost" />
+					<div className="project-ghost" />
+					<div className="project-ghost" />
+					<div className="project-ghost" />
+					<div className="project-ghost" />
+					<div className="project-ghost" />
 
 				</div>
+
 			</div>
 
 		)

@@ -3,8 +3,6 @@
  */
 import React from 'react'
 import {connect} from "react-redux";
-import GitLogo from '../assets/github.png'
-import LinkedinLogo from '../assets/ln-logo.png'
 
 
 const Footer = (props) => {
@@ -12,13 +10,12 @@ const Footer = (props) => {
 
 	return (
 		<div className="footer-container">
-			<img src={GitLogo} className="footer-item">
-			</img>
-			<img src={LinkedinLogo} className="footer-item">
-			</img>
+			<div className="copyright">
+				© Adam Ahrens {JSON.stringify(new Date().getFullYear())}
+			</div>
 		</div>
 	)
-}
+};
 
 
 export default connect(

@@ -1,0 +1,57 @@
+.content-container
+  .text
+    position: relative
+    width: 100%
+    height: auto
+    top: 0
+    margin: 30px
+    color: white
+    opacity: .85
+    text-align: center
+    font-family: Roboto, sans-serif
+    font-size: 50px
+    .sub-header
+      font-size: 30px
+      @include breakpoint($tablet)
+        font-size: 20px
+
+  background-color: $darker_grey
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  min-height: 100vh  - #{64px}
+
+.home-table
+  height: auto
+  width: 100%
+  margin: 0 auto 0 auto
+  position: relative
+  max-height: 725px
+  .background
+    height: 55%
+    width: 100%
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    background: linear-gradient(rgba($orange, .8), rgba($orange, .8)), linear-gradient(white, white)
+  img
+    width: 100%
+    position: relative
+    max-height: inherit
+  .teeny
+    width: 20vw
+    height: 20vh
+    position: absolute
+    bottom: 0
+  .left
+    margin-left: 20vw
+    left: 0
+  .right
+    margin-right: 20vw
+    right: 0
+  .pulsating
+    animation-duration: .4s
+    animation-name: pulsate
+    animation-iteration-count: infinite

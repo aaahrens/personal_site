@@ -1,10 +1,15 @@
-@import "partials/header"
-@import "partials/footer"
+@import partials/globals/animations
+@import partials/globals/mixins
+@import "partials/components/header"
+@import "partials/components/footer"
 @import "partials/variables/sizes"
-@import "partials/project"
-@import "partials/home"
-@import partials/about
-@import partials/contact
+@import "partials/containers/projects"
+@import "partials/containers/home"
+@import partials/containers/about
+@import partials/containers/contact
+@import "partials/components/navdrawer"
+@import partials/components/beaver_card
+@import partials/components/speaker_card
 
 *
   margin: 0
@@ -12,27 +17,16 @@
   outline: none
 
 body
-  background-color: #eee
+  background-color: $background-default
   overflow-x: hidden
 
-@keyframes pulsate
-  0%
-    transform: scale(.9)
-  10%
-    transform: scale(1.15)
-  100%
-    transform: scale(1)
+a
+  text-decoration: none !important
+  color: inherit !important
 
-.goop
-  height: 50px
-  width: 50px
 
-.actionMenu
-  button
-    color: white !important
+.white-override
+  color: white !important
 
-.icon-github:before
-  content: "\e900"
-
-.card-penis
-  margin-top: auto
+.list-overide
+  color: white !important

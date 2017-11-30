@@ -24,10 +24,6 @@ const beaverjobs = {
 	github: null,
 	className: "beaver",
 	logo: require("../../assets/logos/beaverLogo.svg"),
-	// coauthors: [{
-	// 	name: "Jonas Rothman",
-	// 	link: null
-	// }],
 };
 
 
@@ -53,7 +49,7 @@ const thiswebsite = {
 	github: {
 		link: "https://github.com/drunkengranite/personal_site_react_redux"
 	},
-	logo: require("../../assets/logos/adam_logo.png"),
+	logo: require("../../assets/logos/personal.png"),
 	className: "adamahrens",
 	coauthors: [],
 };
@@ -66,6 +62,37 @@ const halla = {
 	logo: require("../../assets/logos/halla.png"),
 	className: "halla",
 	coauthors: [],
+};
+
+const Synonymity = {
+	description: "todo",
+	title: "Synonymity",
+	github: {
+		link: "todo"
+	},
+	logo: require("../../assets/logos/halla.png"),
+	className: "synonymity"
+}
+
+const Web_Scrapers = {
+	description: "todo",
+	title: "web scrapers",
+	github: {
+		link: "todo"
+	},
+	logo: require("../../assets/logos/halla.png"),
+	className: "scrapers"
+}
+
+
+const Boilerplates = {
+	description: "todo",
+	title: "boilerplate",
+	github: {
+		link: "todo"
+	},
+	logo: require("../../assets/logos/halla.png"),
+	className: "boilerplates"
 }
 
 const initialState = {
@@ -74,11 +101,17 @@ const initialState = {
 		skilletscafe,
 		beaverjobs,
 		thiswebsite,
-		halla
+		halla,
+		Synonymity,
+		Boilerplates,
+		Web_Scrapers
 	]
 };
 
-const ProjectsReducer = handleActions({}, initialState);
+const ProjectsReducer = handleActions({
+
+
+}, initialState);
 
 export default ProjectsReducer;
 

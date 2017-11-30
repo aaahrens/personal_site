@@ -3,45 +3,56 @@ import Footer from '../components/footer'
 import Layout from "react-toolbox/lib/layout/Layout";
 import Panel from "react-toolbox/lib/layout/Panel";
 import NavDrawer from "react-toolbox/lib/layout/NavDrawer";
-import List from "react-toolbox/lib/list/List";
-import ListItem from "react-toolbox/lib/list/ListItem";
-import ListDivider from "react-toolbox/lib/list/ListDivider";
 import {connect} from "react-redux";
 import {Route, Switch} from "react-router";
-import Logo from '../assets/logos/adam_logo.png'
 import {push} from 'react-router-redux'
 import HomeBody from '../containers/home/home.container'
 import ContactBody from "../containers/contact/contact.container";
 import AboutBody from "../containers/about/about.container";
 import ProjectBody from "../containers/projects/projects.container";
 import * as HomeActions from "../containers/home/home.actions";
-import IconMenu from "react-toolbox/lib/menu/IconMenu";
-import MenuItem from "react-toolbox/lib/menu/MenuItem";
 import AppBar from "react-toolbox/lib/app_bar/AppBar";
 import Navigation from "react-toolbox/lib/navigation/Navigation";
-import Button from "react-toolbox/lib/button/Button";
-
-let FetchTitle = () => {
-	return "hello hello"
-};
-
-
-let MenuTest = () =>
-	<IconMenu icon='more_vert' position='topRight' menuRipple className='actionMenu'>
-		<MenuItem value='download' icon='get_app' caption='Resume'
-				  onClick={() => window.open("https://s3-us-west-1.amazonaws.com/person-website-resume/Resume+(1).pdf")}/>
-
-		<MenuItem value='email' icon='email' caption='Email' onClick={() => document.getElementById("mail").click()}/>
-	</IconMenu>;
-
+import TopRightContextMenu from "../components/context.menu.header";
+import FontIcon from "react-toolbox/lib/font_icon/FontIcon";
+import NavDrawerContent from '../components/navdrawer.content'
 
 class HomePage extends Component {
+
+
+	constructor(props) {
+		super(props);
+
+
+		let Hamburger = <FontIcon>menu</FontIcon>;
+		//I have to do it like this instead of having a component return null because of how render() => null
+		//affects the appbar i.e it will still render the Ripple
+
+		if (typeof window !== 'undefined') {
+			window.addEventListener("resize", (event) => {
+				if (window.innerWidth > 1024) {
+					this.setState({...this.state, hamburger: null})
+				} else {
+					this.setState({...this.state, hamburger: <FontIcon>menu</FontIcon>})
+				}
+			});
+
+			if (window.innerWidth > 1024) {
+				Hamburger = null;
+			}
+		}
+
+
+		this.state = {
+			hamburger: Hamburger
+		}
+
+	}
 
 	handleClick(route) {
 		this.props.pushRoute(route);
 		this.props.hideDrawer()
 	}
-
 
 	render = () =>
 
@@ -49,29 +60,14 @@ class HomePage extends Component {
 			<Layout>
 				<NavDrawer permanentAt='lgTablet' active={this.props.drawerOpen}
 						   onOverlayClick={() => this.props.hideDrawer()}>
-					<List>
-						<ListItem legend='@drunkengranite' caption={"Adam Ahrens"} ripple={false}
-								  rightIcon={<img className={"goop"} src={Logo}/>}/>
-						<ListDivider/>
-						<ListItem caption='Home' rightIcon={<span className="fa fa-home"/>}
-								  onClick={() => this.handleClick("/")}/>
-
-						<ListItem rightIcon={'code'} caption='Projects/Startups'
-								  onClick={() => this.handleClick("/projects")}/>
-
-						<ListItem caption='About' rightIcon={'description'}
-								  onClick={() => this.handleClick("/about")}/>
-
-						<ListItem caption='Contact' rightIcon={'room_service'}
-								  onClick={() => this.handleClick("/contact")}/>
-
-					</List>
+					<NavDrawerContent />
 				</NavDrawer>
+
 				<Panel>
-					<AppBar title={"hello hello"} leftIcon='menu'
+					<AppBar title={"hello hello"} leftIcon={this.state.hamburger}
 							onLeftIconClick={() => this.props.showDrawer()} className="appBar">
 						<Navigation type="horizontal">
-							<MenuTest/>
+							<TopRightContextMenu/>
 						</Navigation>
 					</AppBar>
 
@@ -81,7 +77,6 @@ class HomePage extends Component {
 						<Route exact path={"/about"} component={AboutBody}/>
 						<Route exact path={"/"} component={HomeBody}/>
 						<Route render={() => <div>404 not found</div>}/>
-
 					</Switch>
 					<Footer/>
 				</Panel>

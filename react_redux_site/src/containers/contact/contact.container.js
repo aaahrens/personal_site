@@ -1,37 +1,80 @@
 import React, {Component} from 'react'
 import Button from "react-toolbox/lib/button/Button";
-import FontIcon from "react-toolbox/lib/font_icon/FontIcon";
+import Snackbar from "react-toolbox/lib/snackbar/Snackbar";
+import {EMAIL, GITHUB_LINK, LINKEDIN_LINK, RESUME_LINK} from "../../constants/constants";
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
 
 class ContactBody extends Component {
+
+	constructor(props) {
+		super(props)
+		this.state = {
+			active: false
+		}
+	}
+
+	handleClick = (name) => {
+		this.setState({
+			...this.state,
+			active: true,
+			name: name
+		})
+	};
+
+	handleSnackbarClick = () => {
+		this.setState({
+			...this.state,
+			active: false
+		})
+	};
 
 
 	render = () =>
 		<div className="contact-container">
 			<h1>Quick Links</h1>
+
+
 			<div className="copy-item">
-				<div>
-					adam@adamahrens.me
-				</div>
-				<Button raised className="black-icon-contact" icon="content_copy"/>
+				Email
+				<CopyToClipboard text={EMAIL}>
+					<Button raised className="black-icon-contact" icon="content_copy"
+							onClick={() => this.handleClick(EMAIL)}/>
+				</CopyToClipboard>
 			</div>
 
 			<div className="copy-item">
 				Link to resume
-				<Button raised className="black-icon-contact" icon="content_copy"/>
-
+				<CopyToClipboard text={RESUME_LINK}>
+					<Button raised className="black-icon-contact" icon="content_copy"
+							onClick={() => this.handleClick(RESUME_LINK)}/>
+				</CopyToClipboard>
 			</div>
 
 			<div className="copy-item">
 				Github
-				<Button raised className="black-icon-contact" icon="content_copy"/>
+				<CopyToClipboard text={GITHUB_LINK}>
+
+					<Button raised className="black-icon-contact" icon="content_copy"
+							onClick={() => this.handleClick(GITHUB_LINK)}/>
+				</CopyToClipboard>
 			</div>
 
 			<div className="copy-item">
 				Linkedin
-				<Button raised className="black-icon-contact" icon="content_copy"/>
-			</div>
+				<CopyToClipboard text={LINKEDIN_LINK}>
 
+					<Button raised className="black-icon-contact" icon="content_copy"
+							onClick={() => this.handleClick(LINKEDIN_LINK)}/>
+				</CopyToClipboard>
+			</div>
+			<Snackbar
+				label={"Copied " + this.state.name + " to clipboard"}
+				active={this.state.active}
+				timeout={2000}
+				onTimeout={this.handleSnackbarClick}
+				type='accept'
+			/>
 		</div>
 }
 

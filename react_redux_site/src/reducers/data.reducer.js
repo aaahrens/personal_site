@@ -2,9 +2,7 @@
  * Created by drunkengranite on 5/29/17.
  */
 import {handleActions} from 'redux-actions'
-import {
-	SELECT_TAB
-} from '../constants/constants'
+import {SELECT_TAB} from '../constants/constants'
 import Immutable from 'immutable'
 
 let initialState = {

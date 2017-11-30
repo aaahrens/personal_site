@@ -13,7 +13,7 @@ const Routes = (props) => {
 			<Switch>
 				<Route path={"/"} component={HomePage}/>
 			</Switch>
-			<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" id="mail"></a>
+			<a href="mailto:adam@adamahrens.me" target="_top" id="mail"/>
 		</div>
 	)
 };

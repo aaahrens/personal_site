@@ -14,10 +14,10 @@ const universalLoader = (req, res) => {
 
 	fs.readFile(filePath, 'utf8', (err, htmlData) => {
 		if (err) {
-			console.error('read err', err)
+			console.error('read err', err);
 			return res.status(404).end()
 		}
-		const context = {}
+		const context = {};
 		const markup = ReactDOMServer.renderToString(
 			<Provider store={store}>
 				<StaticRouter
