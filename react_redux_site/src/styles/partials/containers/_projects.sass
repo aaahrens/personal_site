@@ -2,8 +2,10 @@
 @import "../variables/colors"
 
 .project-container
-  min-height: 85vh
+  min-height: calc(100vh - #{64px})
   width: 100%
+  @include breakpoint($tablet)
+    min-height: calc(100vh - #{56px})
   .project-list
     width: 100%
     height: auto
@@ -12,6 +14,7 @@
     .project-card
       flex: 1 1 $project-card-width
       margin: $project-card-margin
+      background-color: $card-color-background !important
       .skillets
         background-color: #5A352D
         background-size: 100% 100%
@@ -26,13 +29,23 @@
         background-size: 100% 100%
 
       .adamahrens
-        object-fit: contain
+        background-size: 27% 48%
+        background-color: $orange
 
       .halla
         background-color: #e76060
-        width: auto
-        object-fit: contain
-        background-size: 50% 80%
+        background-size: contain !important
+
+      .scrapers
+        background-color: $python-blue
+        background-size: contain !important
+      .boilerplates
+        background-color: $primary
+        background-size: contain !important
+
+      .synonymity
+        background-color: #2d2d2d
+        background-size: contain !important
 
 .project-ghost
   flex: 1 1 $project-card-width

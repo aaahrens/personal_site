@@ -27,8 +27,8 @@ class TopRightContextMenu extends Component {
 					<MenuItem value='download' icon='get_app' caption='Resume' className="context-menu-override"
 							  onClick={() => window.open("https://s3-us-west-1.amazonaws.com/person-website-resume/Resume+(1).pdf")}/>
 
-					<MenuItem value='email' icon='email' caption='Email'
-							  onClick={() => document.getElementById("mail").click()}/>
+					{/*<MenuItem value='email' icon='email' caption='Email'*/}
+							  {/*onClick={() => document.getElementById("mail").click()}/>*/}
 				</IconMenu>
 			)
 		}
@@ -38,8 +38,7 @@ class TopRightContextMenu extends Component {
 			<div>
 				<Button label={"resume"} className={"white-override"}
 						onClick={() => window.open("https://s3-us-west-1.amazonaws.com/person-website-resume/Resume+(1).pdf")}/>
-				<Button label={"email"} className={"white-override"}
-						onClick={() => document.getElementById("mail").click()}/>
+
 			</div>
 		)
 	}

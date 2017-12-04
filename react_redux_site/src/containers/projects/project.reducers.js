@@ -1,8 +1,11 @@
 import {handleActions} from "redux-actions";
+import {
+	Aggre_Description, Boilerplate_Description, Synonymity_Description,
+	Web_Scraping_Description
+} from "../../constants/constants";
 
 const aggre = {
-	description: "A website designed to aggregate a fractured live-streaming market. Currently working with twitch, and youtube, includes a " +
-	"full stack golang api, python web scrapers and universal react client. Email me for a look at the repos",
+	description: Aggre_Description,
 	title: "Aggre.tv",
 	link: "https://aggre.tv/feeds/browse",
 	github: null,
@@ -49,7 +52,7 @@ const thiswebsite = {
 	github: {
 		link: "https://github.com/drunkengranite/personal_site_react_redux"
 	},
-	logo: require("../../assets/logos/personal.png"),
+	logo: require("../../assets/logos/coffee_black.png"),
 	className: "adamahrens",
 	coauthors: [],
 };
@@ -65,33 +68,33 @@ const halla = {
 };
 
 const Synonymity = {
-	description: "todo",
+	description: Synonymity_Description,
 	title: "Synonymity",
 	github: {
 		link: "todo"
 	},
-	logo: require("../../assets/logos/halla.png"),
+	logo: "https://developer.android.com/images/brand/Android_Robot_200.png",
 	className: "synonymity"
 }
 
 const Web_Scrapers = {
-	description: "todo",
-	title: "web scrapers",
+	description: Web_Scraping_Description,
+	title: "Web Scrapers",
 	github: {
-		link: "todo"
+		link: "https://github.com/drunkengranite/srjc-scraper"
 	},
-	logo: require("../../assets/logos/halla.png"),
+	logo: "https://www.python.org/static/img/python-logo@2x.png",
 	className: "scrapers"
 }
 
 
 const Boilerplates = {
-	description: "todo",
-	title: "boilerplate",
+	description: Boilerplate_Description,
+	title: "Isomorphic Boilerplate",
 	github: {
-		link: "todo"
+		link: "https://github.com/drunkengranite/isomorphic-boilerplate"
 	},
-	logo: require("../../assets/logos/halla.png"),
+	logo: require("../../assets/logos/nodejs-logo.svg"),
 	className: "boilerplates"
 }
 

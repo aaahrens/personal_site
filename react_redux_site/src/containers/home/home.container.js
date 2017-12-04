@@ -15,7 +15,6 @@ class HomeBody extends Component {
 
 		<div className="home-body-container">
 			<SpeakersCard/>
-			<BeaverCard />
 		</div>
 }
 

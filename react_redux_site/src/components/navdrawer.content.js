@@ -7,10 +7,16 @@ import {connect} from "react-redux";
 import {push} from 'react-router-redux'
 import Logo from '../assets/logos/personal.png'
 import * as HomeActions from "../containers/home/home.actions";
+import FontIcon from "react-toolbox/lib/font_icon/FontIcon";
 
 class NavDrawerContent extends Component {
 	constructor(props) {
 		super(props);
+	}
+
+	isSelected(name) {
+		if (name === this.props.local.pathname) return "selected";
+		return ""
 	}
 
 
@@ -27,25 +33,34 @@ class NavDrawerContent extends Component {
 				</div>
 
 				<ListDivider/>
-				<ListItem caption='Home' rightIcon={<span className="fa fa-home"/>}
+
+				<ListItem caption='Home'
+						  className="drawer-nav-content"
+						  rightIcon={<span className={"fa fa-home " + this.isSelected("/")}/>}
 						  onClick={() => {
 							  this.props.pushRoute("/");
 							  this.props.hide()
 						  }}/>
 
-				<ListItem rightIcon={'code'} caption='Projects/Startups'
+				<ListItem rightIcon={<FontIcon className={this.isSelected("/projects")}>code</FontIcon>}
+						  caption='Projects/Startups'
+						  className="drawer-nav-content"
 						  onClick={() => {
 							  this.props.pushRoute("/projects");
 							  this.props.hide()
 						  }}/>
 
-				<ListItem caption='About' rightIcon={'description'}
+				<ListItem caption='About'
+						  className="drawer-nav-content"
+						  rightIcon={<FontIcon className={this.isSelected("/about")}>description</FontIcon>}
 						  onClick={() => {
 							  this.props.pushRoute("/about");
 							  this.props.hide()
 						  }}/>
 
-				<ListItem caption='Contact' rightIcon={'room_service'}
+				<ListItem caption='Contact'
+						  className="drawer-nav-content"
+						  rightIcon={<FontIcon className={this.isSelected("/contact")}>room_service</FontIcon>}
 						  onClick={() => {
 							  this.props.pushRoute("/contact");
 							  this.props.hide()
@@ -57,7 +72,9 @@ class NavDrawerContent extends Component {
 
 
 export default connect(
-	(state) => ({}),
+	(state) => ({
+		local: state.router.location
+	}),
 	(dispatch) => ({
 		pushRoute: (route) => dispatch(push(route)),
 		hide: () => dispatch(HomeActions.hideDrawer()),

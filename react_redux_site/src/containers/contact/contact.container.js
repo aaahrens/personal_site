@@ -37,6 +37,10 @@ class ContactBody extends Component {
 
 			<div className="copy-item">
 				Email
+				<Button label={"Open in Client"}
+						primary
+						className="copy-button-override"
+						onClick={() => document.getElementById("mail").click()}/>
 				<CopyToClipboard text={EMAIL}>
 					<Button raised className="black-icon-contact" icon="content_copy"
 							onClick={() => this.handleClick(EMAIL)}/>
