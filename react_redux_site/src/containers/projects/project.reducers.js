@@ -45,12 +45,12 @@ const skilletscafe = {
 
 
 const thiswebsite = {
-	description: "...you're kinda looking at it. Includes the React-Redux version of this site, the Elm version (might be not working)" +
+	description: "Includes the React-Redux version of this site, the Elm version (work in progress)" +
 	"and the short Go API used for content",
 	title: "This website",
 	link: "",
 	github: {
-		link: "https://github.com/drunkengranite/personal_site_react_redux"
+		link: "https://github.com/drunkengranite/personal_site"
 	},
 	logo: require("../../assets/logos/coffee_black.png"),
 	className: "adamahrens",
