@@ -68,13 +68,7 @@ class AboutBody extends Component {
 						I typically only build with <strong>Electron</strong> for desktop applications. The pains of developing for three operating systems is outweighed by the transcompiling issues and bugs that electron has. Dealing with three desktop environments
 						is much more of a harm than the (admittedly frequent) chromium error.
 					</li>
-					<li>
-						<strong>Java or Python</strong> GUI libraries are alternative options. I would consider using javaFX or tkinter if the application needed to be run
-						either hyper efficient or mission critical, because runtime errors are harder to test in
-						nodeJS.
-					</li>
 				</ul>
-
 			</div>
 		</div>
 }
