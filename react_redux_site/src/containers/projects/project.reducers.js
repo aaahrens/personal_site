@@ -71,7 +71,7 @@ const Synonymity = {
 	description: Synonymity_Description,
 	title: "Synonymity",
 	github: {
-		link: "todo"
+		link: "https://github.com/drunkengranite/synonymity"
 	},
 	logo: "https://developer.android.com/images/brand/Android_Robot_200.png",
 	className: "synonymity"
