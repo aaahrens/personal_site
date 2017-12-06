@@ -44,11 +44,8 @@ is provided within the project. Something similar could be done for the aws.
 ...maybe when aws gets those bare metal instances up and running.
 
 
-
 ## credits:
-react-toolbox -> [react-toolbox](https://react-toolbox.io)
-
-react-toolbox-themr ->  [react-toolbox-themr](https://github.com/evilstreak/markdown-js)
-
-create-react-app ->  [create-react-app](https://github.com/evilstreak/markdown-js)
+* [react-toolbox](https://react-toolbox.io)
+* [react-toolbox-themr](https://github.com/evilstreak/markdown-js)
+* [create-react-app](https://github.com/evilstreak/markdown-js)
 

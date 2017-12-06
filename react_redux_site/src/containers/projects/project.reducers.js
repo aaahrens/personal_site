@@ -1,11 +1,17 @@
 import {handleActions} from "redux-actions";
 import {
-	Aggre_Description, Boilerplate_Description, Synonymity_Description,
-	Web_Scraping_Description
+
 } from "../../constants/constants";
+import {AGGRE_DESCRIPTIONS} from "../../constants/constants";
+import {SKILLETS_DESCRIPTION} from "../../constants/constants";
+import {SCRAPING_DESCRIPTION} from "../../constants/constants";
+import {BOILERPLATE_DESCRIPTION} from "../../constants/constants";
+import {SYNONYMITY_DESCRIPTION} from "../../constants/constants";
+import {HALLA_DESCRIPTION} from "../../constants/constants";
+import {ADAM_DESCRIPTION} from "../../constants/constants";
 
 const aggre = {
-	description: Aggre_Description,
+	description: AGGRE_DESCRIPTIONS,
 	title: "Aggre.tv",
 	link: "https://aggre.tv/feeds/browse",
 	github: null,
@@ -22,17 +28,16 @@ const aggre = {
 const beaverjobs = {
 	description: "A startup that lets workers leverage their experiences, field and valid date their references and auto generate their resume. " +
 	"We plan to actually be able to tangibly prove a person is a superior worker based on their extracurriculars and references, not just their degree",
-	title: "beaverjobs.io",
-	link: "https://beaverjobs.io",
+	title: "kangaroojobs.io",
+	link: "https://kangaroojobs.io",
 	github: null,
-	className: "beaver",
-	logo: require("../../assets/logos/beaverLogo.svg"),
+	className: "kangaroo",
+	logo: null,
 };
 
 
 const skilletscafe = {
-	description: "Thw website of a cafe I regular at, and use a tech guinea pig. This uses google sheets as a CMS, SSR's and hydrates the" +
-	" redux store with data spreadsheet. Note I am working making it prettier :)",
+	description: SKILLETS_DESCRIPTION,
 	title: "Skillets Cafe",
 	link: "http://skilletscafewindsor.com",
 	github: {
@@ -45,8 +50,7 @@ const skilletscafe = {
 
 
 const thiswebsite = {
-	description: "Includes the React-Redux version of this site, the Elm version (work in progress)" +
-	"and the short Go API used for content",
+	description: ADAM_DESCRIPTION,
 	title: "This website",
 	link: "",
 	github: {
@@ -58,8 +62,7 @@ const thiswebsite = {
 };
 
 const halla = {
-	description: "Back when I worked for these guys they were still a food recommendation platform. I created datascrapers based in both java and python and " +
-	"build an alpha-version android app",
+	description: HALLA_DESCRIPTION,
 	title: "Halla.co",
 	link: "http://halla.co",
 	logo: require("../../assets/logos/halla.png"),
@@ -68,7 +71,7 @@ const halla = {
 };
 
 const Synonymity = {
-	description: Synonymity_Description,
+	description: SYNONYMITY_DESCRIPTION,
 	title: "Synonymity",
 	github: {
 		link: "https://github.com/drunkengranite/synonymity"
@@ -78,7 +81,7 @@ const Synonymity = {
 }
 
 const Web_Scrapers = {
-	description: Web_Scraping_Description,
+	description: SCRAPING_DESCRIPTION,
 	title: "Web Scrapers",
 	github: {
 		link: "https://github.com/drunkengranite/srjc-scraper"
@@ -89,7 +92,7 @@ const Web_Scrapers = {
 
 
 const Boilerplates = {
-	description: Boilerplate_Description,
+	description: BOILERPLATE_DESCRIPTION,
 	title: "Isomorphic Boilerplate",
 	github: {
 		link: "https://github.com/drunkengranite/isomorphic-boilerplate"
@@ -101,11 +104,11 @@ const Boilerplates = {
 const initialState = {
 	projects: [
 		aggre,
-		skilletscafe,
-		beaverjobs,
 		thiswebsite,
-		halla,
 		Synonymity,
+		// beaverjobs,
+		halla,
+		skilletscafe,
 		Boilerplates,
 		Web_Scrapers
 	]
