@@ -43,6 +43,10 @@ is provided within the project. Something similar could be done for the aws.
 
 ...maybe when aws gets those bare metal instances up and running.
 
+## todos
+* add one or two extra panels for large screens on the homepage.
+* more projects
+
 
 ## credits:
 * [react-toolbox](https://react-toolbox.io)
