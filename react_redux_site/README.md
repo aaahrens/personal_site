@@ -46,6 +46,6 @@ is provided within the project. Something similar could be done for the aws.
 
 ## credits:
 * [react-toolbox](https://react-toolbox.io)
-* [react-toolbox-themr](https://github.com/evilstreak/markdown-js)
-* [create-react-app](https://github.com/evilstreak/markdown-js)
+* [react-toolbox-themr](https://github.com/react-toolbox/react-toolbox-themr)
+* [create-react-app](https://github.com/facebookincubator/create-react-app)
 
