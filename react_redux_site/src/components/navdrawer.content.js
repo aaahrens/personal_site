@@ -23,7 +23,7 @@ class NavDrawerContent extends Component {
 	render() {
 		return (
 			<List className={"list-overide"}>
-				<ListItem legend='@drunkengranite' caption={"Adam Ahrens"} ripple={false}
+				<ListItem legend='@aaahrens' caption={"Adam Ahrens"} ripple={false}
 						  rightIcon={<img className={"personal-logo"} src={Logo}/>}/>
 
 				<ListDivider/>

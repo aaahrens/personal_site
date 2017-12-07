@@ -57,7 +57,7 @@ class SpeakersCard extends Component {
 					Full Stack Applications
 					<br/>
 					<div className={"sub-header"}>
-						powered by pain and suffering
+						by Adam Ahrens
 					</div>
 				</div>
 
