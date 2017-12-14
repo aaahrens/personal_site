@@ -41,7 +41,7 @@ const skilletscafe = {
 	title: "Skillets Cafe",
 	link: "http://skilletscafewindsor.com",
 	github: {
-		link: "https://github.com/drunkengranite/skillet_website"
+		link: "https://github.com/aaahrens/skillet_website"
 	},
 	logo: require("../../assets/logos/skillets.svg"),
 	className: "skillets",
@@ -54,7 +54,7 @@ const thiswebsite = {
 	title: "This website",
 	link: "",
 	github: {
-		link: "https://github.com/drunkengranite/personal_site"
+		link: "https://github.com/aaahrens/personal_site"
 	},
 	logo: require("../../assets/logos/coffee_black.png"),
 	className: "adamahrens",
@@ -74,7 +74,7 @@ const Synonymity = {
 	description: SYNONYMITY_DESCRIPTION,
 	title: "Synonymity",
 	github: {
-		link: "https://github.com/drunkengranite/synonymity"
+		link: "https://github.com/aaahrens/synonymity"
 	},
 	logo: "https://developer.android.com/images/brand/Android_Robot_200.png",
 	className: "synonymity"
@@ -84,7 +84,7 @@ const Web_Scrapers = {
 	description: SCRAPING_DESCRIPTION,
 	title: "Web Scrapers",
 	github: {
-		link: "https://github.com/drunkengranite/srjc-scraper"
+		link: "https://github.com/aaahrens/srjc-scraper"
 	},
 	logo: "https://www.python.org/static/img/python-logo@2x.png",
 	className: "scrapers"
@@ -95,7 +95,7 @@ const Boilerplates = {
 	description: BOILERPLATE_DESCRIPTION,
 	title: "Isomorphic Boilerplate",
 	github: {
-		link: "https://github.com/drunkengranite/isomorphic-boilerplate"
+		link: "https://github.com/aaahrens/isomorphic-boilerplate"
 	},
 	logo: require("../../assets/logos/nodejs-logo.svg"),
 	className: "boilerplates"

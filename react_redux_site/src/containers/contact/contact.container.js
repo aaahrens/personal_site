@@ -14,6 +14,12 @@ class ContactBody extends Component {
 		}
 	}
 
+	componentWillMount() {
+		if (typeof window !== 'undefined') {
+			window.scrollTo(0, 0)
+		}
+	}
+
 	handleClick = (name) => {
 		this.setState({
 			...this.state,

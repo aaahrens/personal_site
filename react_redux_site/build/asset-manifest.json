@@ -1,9 +1,8 @@
 {
-  "main.css": "static/css/main.04757471.css",
-  "main.css.map": "static/css/main.04757471.css.map",
-  "main.js": "static/js/main.42f86a9a.js",
-  "main.js.map": "static/js/main.42f86a9a.js.map",
-  "static/media/adam_table.svg": "static/media/adam_table.15585c45.svg",
+  "main.css": "static/css/main.32ca6218.css",
+  "main.css.map": "static/css/main.32ca6218.css.map",
+  "main.js": "static/js/main.87d0c1fb.js",
+  "main.js.map": "static/js/main.87d0c1fb.js.map",
   "static/media/aggre.svg": "static/media/aggre.9ce3ea48.svg",
   "static/media/beever.svg": "static/media/beever.932cb43a.svg",
   "static/media/halla.png": "static/media/halla.4d5678f8.png",
@@ -11,5 +10,6 @@
   "static/media/personal.png": "static/media/personal.575cf345.png",
   "static/media/skillets.svg": "static/media/skillets.29c2d915.svg",
   "static/media/subwoofer_base.svg": "static/media/subwoofer_base.8274447f.svg",
-  "static/media/subwoofer_circles.svg": "static/media/subwoofer_circles.df1583b8.svg"
+  "static/media/subwoofer_circles.svg": "static/media/subwoofer_circles.df1583b8.svg",
+  "static/media/table_graphic_revised_raster.svg": "static/media/table_graphic_revised_raster.eef1a737.svg"
 }

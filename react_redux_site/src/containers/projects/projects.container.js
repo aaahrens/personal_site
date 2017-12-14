@@ -13,6 +13,12 @@ class ProjectBody extends Component {
 		super(props)
 	}
 
+	componentWillMount() {
+		if (typeof window !== 'undefined') {
+			window.scrollTo(0, 0)
+		}
+	}
+
 
 	render() {
 		return (
@@ -49,12 +55,12 @@ class ProjectBody extends Component {
 							</Card>
 						)
 					}
-					<div className="project-ghost" />
-					<div className="project-ghost" />
-					<div className="project-ghost" />
-					<div className="project-ghost" />
-					<div className="project-ghost" />
-					<div className="project-ghost" />
+					<div className="project-ghost"/>
+					<div className="project-ghost"/>
+					<div className="project-ghost"/>
+					<div className="project-ghost"/>
+					<div className="project-ghost"/>
+					<div className="project-ghost"/>
 
 				</div>
 

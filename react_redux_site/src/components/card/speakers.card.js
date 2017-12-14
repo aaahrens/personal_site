@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import table from '../../assets/imgs/adam_table.svg'
+import table from '../../assets/imgs/table_graphic_revised_raster.svg'
 import circle from '../../assets/imgs/subwoofer_circles.svg'
 import base from '../../assets/imgs/subwoofer_base.svg'
 
@@ -57,7 +57,7 @@ class SpeakersCard extends Component {
 					Full Stack Applications
 					<br/>
 					<div className={"sub-header"}>
-						by Adam Ahrens
+						cutting edge and detail oriented
 					</div>
 				</div>
 

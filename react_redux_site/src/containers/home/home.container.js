@@ -11,6 +11,13 @@ import BeaverCard from "../../components/card/beaver.card";
 class HomeBody extends Component {
 
 
+
+	componentWillMount(){
+		if (typeof window !== 'undefined'){
+			window.scrollTo(0, 0)
+		}
+	}
+
 	render = () =>
 
 		<div className="home-body-container">

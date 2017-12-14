@@ -3,6 +3,13 @@ import React, {Component} from 'react'
 
 class AboutBody extends Component {
 
+
+	componentWillMount() {
+		if (typeof window !== 'undefined') {
+			window.scrollTo(0, 0)
+		}
+	}
+
 	render = () =>
 		<div className="about-container">
 			<div className="about-text-wrapper">
@@ -47,7 +54,7 @@ class AboutBody extends Component {
 						is key for me to organize my Java, Go and python code
 					</li>
 					<li>
-						It's always preferable to lean toward <strong>resuable, static functions</strong> rather than
+						It's always preferable to lean toward <strong>reusable, static functions</strong> rather than
 						maintaining state across multiple packages.
 					</li>
 				</ul>

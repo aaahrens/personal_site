@@ -8,7 +8,7 @@ export const SHOW_LOADING = "SHOW_LOADING";
 export const STOP_LOADING = "STOP_LOADING";
 
 
-export const GITHUB_LINK = "https://github.com/drunkengranite"
+export const GITHUB_LINK = "https://github.com/aaahrens"
 
 export const RESUME_LINK = "https://s3-us-west-1.amazonaws.com/person-website-resume/Resume.pdf";
 
